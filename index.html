@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <link href="css/prism.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+     			  $(document).ready(function(){
+               $('.scrollspy').scrollSpy();
+       			// Activate the side menu
+            $('.button-collapse').sideNav({
+            menuWidth: 228, // Default is 300
+            edge: 'left', // Choose the horizontal origin
+
+          }
+          );
+          });
+   </script>
+  </head>
+  <style media="screen">
+        header, main, footer {
+           padding-left: 228px;
+         }
+
+         @media only screen and (max-width : 992px) {
+           main, footer {
+             padding-left: 0;
+           }
+         }</style>
+  <header>
+    <div class="col s12 fixed">
+
+
+          <nav class=" grey darken-4 z-depth-2">
+                <ul id="dropdown1" class="dropdown-content">
+                      <li><a class="black-text" href="#!">Perfil</a></li>
+                      <li><a class="black-text" href="#!">Settings</a></li>
+                      <li class="divider"></li>
+                      <li><a class="black-text" href="#!">Cerrar Sesion</a></li>
+                </ul>
+                <div class="nav-wrapper">
+                      <a href="#" class="brand-logo center "><img src="Img/Logo.png" style="margin-top:15px;" width="200" height="35" alt=""></a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                      <li><a class="" href="sass.html">Sass</a></li>
+                      <li><a class="white-text" href="badges.html">Components</a></li>
+                      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Configuracion<i class="material-icons right">arrow_drop_down</i></a></li>
+                    </ul>
+                </div>
+            </nav>
+
+      </div>
+
+
+  </header>
+  <body>
+    <div class="row">
+
+    <div class="col s12 m3 l2" >
+
+        <ul id="slide-out" class="side-nav fixed">
+          <!--        <li>
+                    <div class="userView">
+                    <div class="background">
+                    <img src="Img/fondo.png" width="250%" alt="">
+                    </div>
+                    <a href="#!user"><img class="circle" src="Img/ECorp.png"></a>
+                    <a href="#!name"><span class="white-text name">John Doe</span></a>
+                    <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+                  </div>
+          </li>-->
+          <center> <a id="logo-container"  href="#" class="brand-logo ">
+            <img src="Img/ECorp.png" style="margin-top:15px;" width="75" height="75" alt=""></a></center>
+            <div class="divider"></div>
+
+          <li class="bold" ><a class="waves-effect waves-teal" href="#">Publicaciones</a></li>
+          <li><a class="waves-effect waves-teal" href="#">Libro Diario</a></li>
+          <li><a href="#">Libro Mayor</a></li>
+          <li><a href="#">Estados</a></li>
+          <li><a href="#">Partidas</a></li>
+
+            <li class="bold" style="padding-left:15px;">
+              <ul class="collapsible collapsible-accordion">
+                  <li class="bold"><a class="collapsible-header waves-effect waves-teal">Proyectos</a>
+                    <div class="collapsible-body" style="display: block;">
+                      <ul>
+                          <li><a href="#"><i class=" small material-icons blue-grey-text text-darken-4">description</i>Registros</a></li>
+                          <li><a href="#"><i class=" small material-icons blue-grey-text text-darken-4">insert_chart</i>Estadisticas</a></li>
+                      </ul>
+                    </div>
+                  </li>
+              </ul>
+            </li>
+          </ul>
+
+
+
+          <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+
+
+      </div>
+
+    </div>
+    <main>
+    <div class="col s12 m9 l12  ">
+      <div class="row">
+
+        <div class="col s2 push-s10 ">
+          <ul class="table-of-contents">
+              <li><a href="#download" class="active">Descargar</a></li>
+              <li><a href="#setup" class="">Configuración</a></li>
+              <li><a href="#sass">Sass</a></li>
+              <li><a href="#templates" class="">Plantillas</a></li>
+              <li><a href="#third-party-options" class="">Opciones de terceros</a></li>
+
+            </ul>
+
+        </div>
+        <div class="col s10 pull-s2 ">
+            <div id="download" class="row scrollspy">
+                <h2 class="col s12 header">Descargar</h2>
+              <p class="caption col s12">Materialize comes in two different forms. You can select which version you want depending on your preference and expertise. To start using Materialize, all you have to do is download one of the options below.</p>
+
+              <div class="col s12 m6">
+                <p class="promo-caption">Materialize</p>
+                <p>This is the standard version that comes with both the minified and unminified CSS and JavaScript files. This option requires little to no setup. Use this if you are unfamiliar with Sass.</p>
+                <a id="download-source" class="btn waves-effect waves-light" href="http://materializecss.com/bin/materialize-v0.98.2.zip">Materialize<i class="material-icons right">file_download</i></a>
+              </div>
+              <div class="col s12 m6">
+                <p class="promo-caption">Sass</p>
+                <p>Esta versión contiene los archivos fuente SCSS. Al elegir esta versión tiene más control sobre los componentes que se incluyen. Necesitará un compilador Sass si elige esta opción.</p>
+                <a id="download-sass" class="btn waves-effect waves-light" href="http://materializecss.com/bin/materialize-src-v0.98.2.zip">Source<i class="material-icons right">file_download</i></a>
+              </div>
+              <div class="col s12">
+                <br>
+                <p class="promo-caption">CDN</p>
+                <p>You can find all the versions of the CDN at <a href="https://cdnjs.com/libraries/materialize">cdnjs</a>.</p>
+                <pre class=" language-markup"><code class=" language-markup">
+                <span class="token comment" spellcheck="true">&lt;!-- Compiled and minified CSS --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+
+                <span class="token comment" spellcheck="true">&lt;!-- Compiled and minified JavaScript --&gt;</span>
+                <span class="token script language-javascript"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></span>
+                </code></pre>
+              </div>
+              <div class="col s12">
+                <br>
+                <p class="promo-caption">NPM</p>
+                <p>You can also get the latest release using NPM. This release contains source files as well as the compiled CSS and JavaScript files.</p>
+                <pre class=" language-bash"><code class=" language-bash">
+                npm install materialize<span class="token operator">-</span>css
+                </code></pre>
+              </div>
+              <div class="col s12">
+                <br>
+                <p class="promo-caption">Bower</p>
+                <p>You can also get the latest release using bower. This release contains source files as well as the compiled CSS and JavaScript files.</p>
+                <pre class=" language-bash"><code class=" language-bash">
+                bower install materialize
+                </code></pre>
+              </div></div>
+            <div id="setup" class="row scrollspy">
+                  <div class="col s12">
+                    <h2 class="header">Configuración</h2>
+                    <h4>Estructura del Proyecto</h4>
+                    <p>Después de descargar, extraiga los archivos en el directorio donde esta localizada su página web, su directorio se verá similar a esto.</p>
+                    <p>You'll notice that there are two sets of the files. The <code class=" language-markup">min</code> means that the file is "compressed" to reduce load times. These minified files are usually used in production while it is better to use the unminified files during development.</p>
+
+                    <pre class=" language-markup"><code class=" directory-markup language-markup">
+                      MyWebsite/
+                      |--css/
+                      |  |--materialize.css
+                      |
+                      |--fonts/
+                      |  |--roboto/
+                      |
+                      |--js/
+                      |  |--materialize.js
+                      |
+                      |--index.html
+                    </code></pre>
+                  </div>
+                  <div class="col s12">
+                  <h4>Configuración HTML</h4>
+                  <p>A continuación, sólo tiene que asegurarse de que enlace los archivos correctamente en su página web. Generalmente es aconsejable importar archivos de javascript al final de la etiqueta body para reducir tiempos de carga. Siga el siguiente ejemplo sobre cómo importar Materialize en su página web.</p>
+                  <p> ¡Una última cosa a tener en cuenta es que tiene que importar jQuery antes de importar materialize.js!</p>
+                  <pre class=" language-markup"><code class=" language-markup">
+                  <span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+                  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+                  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token comment" spellcheck="true">&lt;!--Import Google Icon Font--&gt;</span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://fonts.googleapis.com/icon?family<span class="token punctuation">=</span>Material+Icons<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                    <span class="token comment" spellcheck="true">&lt;!--Import materialize.css--&gt;</span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>css/materialize.min.css<span class="token punctuation">"</span></span>  <span class="token attr-name">media</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>screen,projection<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+
+                <span class="token comment" spellcheck="true">&lt;!--Let browser know website is optimized for mobile--&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width, initial-scale<span class="token punctuation">=</span>1.0<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+                <span class="token comment" spellcheck="true">&lt;!--Import jQuery before materialize.js--&gt;</span>
+                <span class="token script language-javascript"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://code.jquery.com/jquery-2.1.1.min.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></span>
+                <span class="token script language-javascript"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>js/materialize.min.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+                  </code></pre>
+                </div></div>
+            <div id="sass" class="row scrollspy">
+              <div class="col s12">
+              <h2 class="header">Configurando Sass</h2>
+              <p class="caption">Esta sección sólo es relevante si opta por descargar la versión Sass de Materialize.</p>
+              <h4>Compilando Sass</h4>
+              <p>Instead of having a css folder, you will find that the download instead contains many .scss files which contain the styles of individual components. Unfortunately, the browser cannot interpret Sass, so you must have your Sass compiler compile the scss/materialize.scss into a regular CSS file. At this point you can link this newly outputted file in your HTML page.</p>
+
+              <pre class=" language-markup"><code class=" directory-markup language-markup">
+                MyWebsite/
+                |--css/
+                |  |--materialize.css &lt;-- compiled from scss/materialize.scss
+                |
+                |--fonts/
+                |  |--roboto/
+                |
+                |--js/
+                |  |--materialize.js
+                |
+                |--scss/
+                |  |--materialize.scss
+                |  |--components/
+                |
+                |--index.html
+                  </code></pre>
+                </div></div>
+            <div id="templates" class="row scrollspy">
+                <h2 class="header">Blockquotes</h2>
+                <blockquote>
+              This is an example quotation that uses the blockquote tag.
+            </blockquote></div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  </body>
+</html>

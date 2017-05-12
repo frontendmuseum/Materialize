@@ -10,6 +10,7 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script>
      			  $(document).ready(function(){
+               $('.scrollspy').scrollSpy();
        			// Activate the side menu
             $('.button-collapse').sideNav({
             menuWidth: 228, // Default is 300
@@ -36,7 +37,7 @@
    <div class="col s12 fixed">
 
 
-         <nav class="white z-depth-2">
+         <nav class=" grey darken-4 z-depth-2">
                <ul id="dropdown1" class="dropdown-content">
                      <li><a class="black-text" href="#!">Perfil</a></li>
                      <li><a class="black-text" href="#!">Settings</a></li>
@@ -46,9 +47,9 @@
                <div class="nav-wrapper">
                      <a href="#" class="brand-logo center "><img src="Img/Logo.png" style="margin-top:15px;" width="200" height="35" alt=""></a>
                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                     <li><a class="black-text" href="sass.html">Sass</a></li>
-                     <li><a class="black-text" href="badges.html">Components</a></li>
-                     <li><a class="dropdown-button black-text" href="#!" data-activates="dropdown1">Configuracion<i class="material-icons right">arrow_drop_down</i></a></li>
+                     <li><a class="" href="sass.html">Sass</a></li>
+                     <li><a class="white-text" href="badges.html">Components</a></li>
+                     <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Configuracion<i class="material-icons right">arrow_drop_down</i></a></li>
                    </ul>
                </div>
            </nav>
@@ -82,15 +83,15 @@
             <img src="Img/ECorp.png" style="margin-top:15px;" width="75" height="75" alt=""></a></center>
             <div class="divider"></div>
 
-          <li class="bold" ><a class="waves-effect waves-teal" href="#"><i class="small material-icons blue-grey-text text-darken-4">create</i>Publicaciones</a></li>
-          <li><a href="#"><i class="small material-icons blue-grey-text text-darken-4">bookmark_border</i>Libro Diario</a></li>
-          <li><a href="#"><i class="small material-icons blue-grey-text text-darken-4">bookmark</i>Libro Mayor</a></li>
-          <li><a href="#"><i class="small material-icons blue-grey-text text-darken-4">book</i>Estados</a></li>
-          <li><a href="#"><i class="small material-icons blue-grey-text text-darken-4">markunread_mailbox</i>Partidas</a></li>
+          <li class="bold" ><a class="waves-effect waves-teal" href="#">Publicaciones</a></li>
+          <li><a class="waves-effect waves-teal" href="#">Libro Diario</a></li>
+          <li><a href="#">Libro Mayor</a></li>
+          <li><a href="#">Estados</a></li>
+          <li><a href="#">Partidas</a></li>
 
-      <li class="bold" style="padding-left:20px;">
+      <li class="bold" style="padding-left:15px;">
         <ul class="collapsible collapsible-accordion">
-            <li class="bold"><a class="collapsible-header waves-effect waves-teal"><i class="medium material-icons blue-grey-text text-darken-4 ">folder</i>Proyectos</a>
+            <li class="bold"><a class="collapsible-header waves-effect waves-teal">Proyectos</a>
               <div class="collapsible-body" style="display: block;">
                 <ul>
                     <li><a href="#"><i class=" small material-icons blue-grey-text text-darken-4">description</i>Registros</a></li>
@@ -169,6 +170,53 @@
           </code></pre>
         </div>
       </div>
+      <div id="setup" class="row scrollspy">
+          <div class="col s12">
+            <h2 class="header">Configuración</h2>
+            <h4>Estructura del Proyecto</h4>
+            <p>Después de descargar, extraiga los archivos en el directorio donde esta localizada su página web, su directorio se verá similar a esto.</p>
+            <p>You'll notice that there are two sets of the files. The <code class=" language-markup">min</code> means that the file is "compressed" to reduce load times. These minified files are usually used in production while it is better to use the unminified files during development.</p>
+
+            <pre class=" language-markup"><code class=" directory-markup language-markup">
+    MyWebsite/
+    |--css/
+    |  |--materialize.css
+    |
+    |--fonts/
+    |  |--roboto/
+    |
+    |--js/
+    |  |--materialize.js
+    |
+    |--index.html
+            </code></pre>
+          </div>
+        <div class="col s12">
+          <h4>Configuración HTML</h4>
+          <p>A continuación, sólo tiene que asegurarse de que enlace los archivos correctamente en su página web. Generalmente es aconsejable importar archivos de javascript al final de la etiqueta body para reducir tiempos de carga. Siga el siguiente ejemplo sobre cómo importar Materialize en su página web.</p>
+          <p> ¡Una última cosa a tener en cuenta es que tiene que importar jQuery antes de importar materialize.js!</p>
+          <pre class=" language-markup"><code class=" language-markup">
+    <span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment" spellcheck="true">&lt;!--Import Google Icon Font--&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://fonts.googleapis.com/icon?family<span class="token punctuation">=</span>Material+Icons<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment" spellcheck="true">&lt;!--Import materialize.css--&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>css/materialize.min.css<span class="token punctuation">"</span></span>  <span class="token attr-name">media</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>screen,projection<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+
+        <span class="token comment" spellcheck="true">&lt;!--Let browser know website is optimized for mobile--&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width, initial-scale<span class="token punctuation">=</span>1.0<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment" spellcheck="true">&lt;!--Import jQuery before materialize.js--&gt;</span>
+        <span class="token script language-javascript"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://code.jquery.com/jquery-2.1.1.min.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></span>
+        <span class="token script language-javascript"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>js/materialize.min.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+          </code></pre>
+        </div>
+      </div>
       <div id="sass" class="row scrollspy">
       <div class="col s12">
         <h2 class="header">Configurando Sass</h2>
@@ -195,58 +243,12 @@
         </code></pre>
       </div>
     </div>
-    <div id="setup" class="row scrollspy">
-        <div class="col s12">
-          <h2 class="header">Configuración</h2>
-          <h4>Estructura del Proyecto</h4>
-          <p>Después de descargar, extraiga los archivos en el directorio donde esta localizada su página web, su directorio se verá similar a esto.</p>
-          <p>You'll notice that there are two sets of the files. The <code class=" language-markup">min</code> means that the file is "compressed" to reduce load times. These minified files are usually used in production while it is better to use the unminified files during development.</p>
 
-          <pre class=" language-markup"><code class=" directory-markup language-markup">
-  MyWebsite/
-  |--css/
-  |  |--materialize.css
-  |
-  |--fonts/
-  |  |--roboto/
-  |
-  |--js/
-  |  |--materialize.js
-  |
-  |--index.html
-          </code></pre>
-        </div>
-      <div class="col s12">
-        <h4>Configuración HTML</h4>
-        <p>A continuación, sólo tiene que asegurarse de que enlace los archivos correctamente en su página web. Generalmente es aconsejable importar archivos de javascript al final de la etiqueta body para reducir tiempos de carga. Siga el siguiente ejemplo sobre cómo importar Materialize en su página web.</p>
-        <p> ¡Una última cosa a tener en cuenta es que tiene que importar jQuery antes de importar materialize.js!</p>
-        <pre class=" language-markup"><code class=" language-markup">
-  <span class="token doctype">&lt;!DOCTYPE html&gt;</span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
-      <span class="token comment" spellcheck="true">&lt;!--Import Google Icon Font--&gt;</span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://fonts.googleapis.com/icon?family<span class="token punctuation">=</span>Material+Icons<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-      <span class="token comment" spellcheck="true">&lt;!--Import materialize.css--&gt;</span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>css/materialize.min.css<span class="token punctuation">"</span></span>  <span class="token attr-name">media</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>screen,projection<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
-
-      <span class="token comment" spellcheck="true">&lt;!--Let browser know website is optimized for mobile--&gt;</span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width, initial-scale<span class="token punctuation">=</span>1.0<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
-
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
-      <span class="token comment" spellcheck="true">&lt;!--Import jQuery before materialize.js--&gt;</span>
-      <span class="token script language-javascript"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://code.jquery.com/jquery-2.1.1.min.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></span>
-      <span class="token script language-javascript"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>js/materialize.min.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
-        </code></pre>
-      </div>
-    </div>
         <h2 class="header">Blockquotes</h2>
         <blockquote>
       This is an example quotation that uses the blockquote tag.
     </blockquote>
-    
+
         <!-- Note that "m8 l9" was added -->
         <!-- Teal page content
 
