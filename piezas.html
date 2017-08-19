@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Nueva Pieza</title>
+    <meta charset="utf-8">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+   <link href="css/estilo.css" rel="stylesheet" />
+   <script type="text/javascript" src="js/materialize.min.js"></script>
+
+  </head>
+
+  <body >
+    <div class="row">
+                <div class="col s12 m12 l12">
+                  <div class="card-panel">
+                    <h4 class="header1">Nueva pieza</h4>
+                    <div class="row">
+                      <form class="col s12">
+                        <div class="row"> <!-- INFORMACION GENERAL PIEZA -->
+                          <div class="input-field col s3">
+                            <input disabled value="SBX11234" id="codigo" type="text" class="validate">
+                            <label for="disabled">Codigo de pieza</label>
+                          </div>
+                          <div class="input-field col s5">
+                            <input id="nombrepieza" type="text">
+                            <label for="last_name">Nombre de la pieza</label>
+                          </div>
+                          <div class="input-field col s4">
+                            <div class="select-wrapper"><span class="caret">▼</span><input type="text" class="select-dropdown" readonly="true" value="">
+                              <select class="initialized">
+                              <option value="4" selected="">Gastos</option>
+                              <option value="3" selected="">Capital</option>
+                              <option value="2" selected="">Pasivo</option>
+                              <option value="1" selected="">Activo</option>
+                            </select>
+                            </div>
+                           <label>Tipo de pieza</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <div class="file-field input-field">
+                                <div class="btn">
+                                  <span>Foto</span>
+                                  <input type="file" multiple>
+                                </div>
+                                <div class="file-path-wrapper">
+                                  <input class="file-path validate" type="text" placeholder="Eliga una fotografia de la pieza">
+                                </div>
+                              </div>
+                          </div>
+                        </div> <!-- /INFORMACION GENERAL PIEZA -->
+                        <div class="divider"></div>
+                        <p>Ficha Informativa</p>
+                        <div class="input-field col s5">
+                          <input id="epocapieza" type="text">
+                          <label for="last_name">Epoca de la pieza</label>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <textarea id="historia" class="materialize-textarea" length="120"></textarea>
+                            <label for="message">Historia</label>
+                          <span class="character-counter" style="float: right; font-size: 12px; height: 1px;"></span></div>
+                        </div>
+                        <div class="divider"></div>
+                  </div>
+                  <div class="row">
+                      <p>Ficha Tecnica</p>
+                      <div class="input-field col s3">
+                        <input id="nombrepieza" type="text">
+                        <label for="last_name">Peso</label>
+                      </div>
+                      <div class="input-field col s3">
+                        <input id="nombrepieza" type="text">
+                        <label for="last_name">Altura</label>
+                      </div>
+                      <div class="input-field col s3">
+                        <input id="nombrepieza" type="text">
+                        <label for="last_name">Ancho</label>
+                      </div>
+                      <div class="input-field col s3">
+                        <div class="select-wrapper"><span class="caret">▼</span><input type="text" class="select-dropdown" readonly="true" value="Género">
+                          <select class="initialized">
+                          <option value="4" selected="">Gastos</option>
+                          <option value="3" selected="">Capital</option>
+                          <option value="2" selected="">Pasivo</option>
+                          <option value="1" selected="">Activo</option>
+                        </select></div>
+                        <label>Género</label>
+                    </div>
+                  </div>
+
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <button class="btn cyan waves-effect waves-light right" type="submit" name="action">Agregar
+                              <i class="mdi-content-send right"></i>
+                            </button>
+                          </div>
+                        </div>
+
+
+                      </form>
+                    </div>
+                  </div>
+                </div>
+</div>
+
+  </body>
+</html>
