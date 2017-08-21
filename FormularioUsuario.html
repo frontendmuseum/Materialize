@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Formulario Ingreso Empleados</title>
+    <title>Formulario Ingreso Usuarios</title>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -77,42 +77,39 @@
     <div class="col s12 m12 l12">
       <div class="col s12 m12 l6">
         <div class="card-panel">
-          <h4 class="header2">Ingreso de nuevo Empleado</h4>
+          <h4 class="header2">Ingreso de nuevo Usuario</h4>
           <div class="row">
 
               <form class="col s12 formValidate" id="formValidate" method="post">
                 <div class="row">
                   <div class="input-field col s12">
-                      <i class="material-icons prefix">account_circle</i>
-                      <label for="uname">Nombres *</label>
+                      <label for="uname">Nombre Usuario*</label>
                       <input id="uname" name="uname" type="text" data-error=".errorTxt1">
                       <div class="errorTxt1"></div>
                   </div>
-                  <div class="input-field col s12">
-                      <i class="material-icons prefix">account_circle</i>
-                      <label for="ulastname">Apellidos *</label>
-                      <input id="ulastname" name="ulastname" type="text" data-error=".errorTxt11">
-                      <div class="errorTxt11"></div>
-                  </div>
-                  <div class="input-field col s12">
-                    <i class="material-icons prefix">smartphone</i>
-                    <label for="cphone">Telefono *</label>
-                    <input id="cphone" type="text" name="cphone" data-error=".errorTxt3">
+                  <div class="input-field col s12 l6" >
+                    <label for="password">Password *</label>
+                    <input id="password" type="password" name="password" data-error=".errorTxt3">
                     <div class="errorTxt3"></div>
                   </div>
-                  <div class="input-field col s12">
-                    <i class="material-icons prefix">email</i>
-                    <label for="cemail">E-Mail *</label>
-                    <input id="cemail" type="email" name="cemail" data-error=".errorTxt2">
-                    <div class="errorTxt2"></div>
+                  <div class="input-field col s12 l6">
+                    <label for="cpassword">Confirmar Password *</label>
+                    <input id="cpassword" type="password" name="cpassword" data-error=".errorTxt4">
+                    <div class="errorTxt4"></div>
+                  </div>
+                  <div class="input-field col s4">
+                      <select>
+                        <option value="" disabled selected>Elige el tipo</option>
+                        <option value="1">Administrador</option>
+                        <option value="2">Operario</option>
+                        <option value="3">Wachiman</option>
+                      </select>
+                      <label>Asignar Rol</label>
                   </div>
 
-
-                  <div class="input-field col s12">
-
-                      <button class="btn waves-effect waves-light right submit" type="submit" name="action">
-                        <i class="material-icons prefix">save</i>
-                        <i class="mdi-content-send right">.</i>
+                  <div class="input-field col s12 l6">
+                      <button class="btn waves-effect waves-light right submit" type="submit" name="action">Crear
+                        <i class="mdi-content-send right material-icons prefix">save</i>
                       </button>
                   </div>
               </div>
@@ -127,48 +124,43 @@
 
   <script type="text/javascript" src="js/jquery.validate.min.js"></script>
   <script type="text/javascript" src="js/additional-methods.min.js"></script>
+  <script type="text/javascript">
+ $(document).ready(function() {
+    $('select').material_select();
+  });
+ </script>
 
   <script type="text/javascript">
     $("#formValidate").validate({
         rules: {
 
-          ulastname: {
-            required: true,
-            minlength:6
-          },
           uname: {
             required: true,
-            minlength:5
+            minlength:10
           },
+
             cemail: {
                 required: true,
                 email:true
             },
-        cphone: {
+            password: {
+        required: true,
+        minlength: 5
+      },
+
+        cpassword: {
           required: true,
-          minlength:8,
-          number:true
+          minlength:5,
+          equalTo: "#password"
         }
         },
         //For custom messages
         messages: {
             uname:{
-                required: "Ingrese un nombre",
-                minlength: "Ingrese al menos 5 caracteres"
+                required: "Enter a username",
+                minlength: "Enter at least 5 characters"
             },
-            ulastname:{
-                required: "Ingrese apellidos",
-                minlength: "Ingrese al menos 6 caracteres"
-            },
-            cphone:{
-                required: "Ingrese numero telefonico",
-                minlength: "Ingrese al menos 8 numeros",
-                number: "Ingrese solo numeros"
-            },
-            cemail:{
-                required: "Ingrese correo electronico",
-                email: "Deben de ser un correo valido"
-            }
+            curl: "Enter your website",
         },
         errorElement : 'div',
         errorPlacement: function(error, element) {
